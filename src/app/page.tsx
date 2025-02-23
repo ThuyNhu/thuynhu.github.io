@@ -1,15 +1,19 @@
 import React from "react";
-import {Button} from "@mantine/core";
+import {Button, Center, Container, Title} from "@mantine/core";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-
-      <Button component={Link} href="/hello">
-        Say hello!
-      </Button>
-    </div>
+    <Center h="100vh">
+      <Container>
+        <Title>Hello, World!</Title>
+        <Button component={Link} href="/hello"
+                variant="gradient"
+                gradient={{from: "pink", to: "grape", deg: 90}}
+        >
+          Say hello
+        </Button>
+      </Container>
+    </Center>
   );
 }
