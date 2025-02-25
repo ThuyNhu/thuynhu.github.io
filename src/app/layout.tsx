@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en" {...mantineHtmlProps}>
     <head>
       <ColorSchemeScript/>
+      <title></title>
     </head>
     <body>
     <MantineProvider theme={theme} defaultColorScheme="auto">
