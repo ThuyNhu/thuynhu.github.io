@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <Center h="100vh">
       <Container className="flex flex-col items-center gap-4">
-        <Title>This page is temporarily experiencing a severe case of</Title>
+        <Title>This page is temporarily experiencing</Title>
+        <Title>a severe case of</Title>
         <Title>&#39;not being a website yet.&#39;</Title>
         <Title>Treatment is underway.</Title>
         <Image
