@@ -1,55 +1,48 @@
-import {useWindowScroll} from "@mantine/hooks";
-import React, {useEffect} from "react";
-import {isScrollAtBottomOfPage, waitAndRedirect} from "@/utils/utils";
+import React, {RefObject, useEffect} from "react";
+import {waitAndRedirect} from "@/utils/utils";
 
 interface NavigationScrollTopOrBottomProps {
+  targetRef?: RefObject<Element | null>,
   href: string,
-  isTop: boolean,
+  isTop?: boolean,
   redirectDelay?: number
   children?: React.ReactNode
 }
 
 
 export function NavigationScrollTopOrBottom({
+  targetRef,
   href,
-  isTop,
+  isTop = false,
   ...props
 }: NavigationScrollTopOrBottomProps) {
-  const [scroll] = useWindowScroll();
-  const hasScrolled = React.useRef<boolean>(false);
 
   useEffect(() => {
-    if (isTop) {
-      if (scroll.y != 0 && !hasScrolled.current) {
-        hasScrolled.current = true;
-      }
-      if (scroll.y == 0 && hasScrolled.current) {
+    const currentTarget = targetRef?.current;
+    if (!currentTarget) return;
+
+    function handleScroll() {
+      const currentTarget = targetRef?.current;
+      if (!currentTarget) return;
+
+      if (isTop && currentTarget.scrollTop == 0)
         waitAndRedirect(href, props.redirectDelay);
-      }
+
+      if (!isTop && currentTarget.scrollTop + currentTarget.clientHeight >= currentTarget.scrollHeight)
+        waitAndRedirect(href, props.redirectDelay);
     }
 
-    if (!isTop) {
-      if (isScrollAtBottomOfPage() && hasScrolled.current) {
-        waitAndRedirect(href, props.redirectDelay);
-      }
-      if (!isScrollAtBottomOfPage() && !hasScrolled.current) {
-        hasScrolled.current = true;
-      }
-    }
-  }, [href, isTop, props.redirectDelay, scroll.y]);
+    currentTarget.addEventListener("scroll", handleScroll);
+
+    return () => {
+      currentTarget.removeEventListener("scroll", handleScroll);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
-      {props.children || null}
+      {props.children}
     </div>
   );
 }
-
-// return (
-//   <PinkTypingAnimationText
-//     text={text}
-//     delay={props.typingAnimationDelay ? props.typingAnimationDelay : 0}
-//     duration={props.typingDuration ? props.typingDuration : 8}
-//   />
-// );
-

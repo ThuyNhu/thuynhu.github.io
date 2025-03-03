@@ -70,7 +70,7 @@ export default function RootLayout({
       "antialiased",
     )}>
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <Container className="relative">{children}</Container>
+      <Container>{children}</Container>
     </MantineProvider>
     </body>
     </html>
