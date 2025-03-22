@@ -8,7 +8,6 @@ import "@mantine/core/styles.css";
 
 import {
   ColorSchemeScript,
-  Container,
   createTheme,
   DEFAULT_THEME,
   mantineHtmlProps,
@@ -70,7 +69,7 @@ export default function RootLayout({
       "antialiased",
     )}>
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <Container>{children}</Container>
+      {children}
     </MantineProvider>
     </body>
     </html>

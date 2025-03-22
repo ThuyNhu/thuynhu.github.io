@@ -4,7 +4,6 @@ import React from "react";
 import {Center} from "@mantine/core";
 import {TypingAnimation} from "@/components/magicui/typing-animation";
 import {LinkWithTypingAnimation} from "@/components/custom/link-with-typing-animation";
-import {DoorClosed} from "lucide-react";
 
 export default function Home() {
   const msPerChar = 50;

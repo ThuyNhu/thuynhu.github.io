@@ -1,12 +1,11 @@
 "use client";
 
 import React, {useEffect, useRef} from "react";
-import {HoverTypingAnimationContainer} from "@/components/custom/hover-typing-animation-container";
-import {PinkTypingAnimationText} from "@/components/custom/pink-typing-animation-text";
-import {NavigationScrollTopOrBottom} from "@/components/custom/navigation-scroll-top-or-bottom";
+import {LinkWithTypingAnimation} from "@/components/custom/link-with-typing-animation";
+import {Container} from "@mantine/core";
 
 
-export default function Home() {
+export default function Present() {
   const timelineRef = useRef<HTMLDivElement>(null);
   const middleSectionRef = useRef<HTMLDivElement>(null);
 
@@ -21,41 +20,32 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={timelineRef}
-      className="max-h-screen w-full overflow-y-scroll flex flex-col gap-8 snap-y snap-mandatory no-scrollbar">
-      <div className="min-h-screen snap-center flex flex-col justify-around items-center">
-          <NavigationScrollTopOrBottom targetRef={timelineRef} href="/past" isTop>
-            <PinkTypingAnimationText
-              text="Trip to the Past"
-              delay={0}
-              duration={16}
-            />
-          </NavigationScrollTopOrBottom>
+    <div className="flex flex-row items-center justify-around">
+      <div className="flex items-center justify-center grow">
+        <LinkWithTypingAnimation text={"← Past"} delay={0} duration={10} link={"/past"}/>
       </div>
+      <Container ref={timelineRef}
+                 className="max-h-screen w-full overflow-y-scroll flex flex-col gap-8 snap-y snap-mandatory no-scrollbar">
+        {/*top section*/}
+        <div className="min-h-screen snap-center flex flex-col justify-around items-center">
+        </div>
 
-      <div ref={middleSectionRef} className="min-h-screen snap-center flex flex-col justify-around items-center">
-        <div className="animate-[var(--animate-bounce)_1s_linear_reverse]">
-          <HoverTypingAnimationContainer text={"Past"} hoveredText={"Scroll up to the Past"}/>
+        {/*middle section*/}
+        <div ref={middleSectionRef} className="min-h-screen snap-center flex flex-col justify-around items-center">
+          <div className="flex flex-col items-center gap-8 space text-xl text-center">
+            <div className="text-8xl">👩🏻‍💻</div>
+            {"Hi! I'm Thuy, a software engineer."}
+            <br/>
+            {"I spend my time convince computers to do what I want."}
+          </div>
         </div>
-        <div className="flex flex-col gap-8 text-center snap-center">
-          <div className="text-8xl">👩🏻‍💻</div>
-          {"Hi! I'm Thuy, a software engineer."}
-          <br/>
-          {"I spend my time convince computers to do what I want."}
-        </div>
-        <div className="animate-bounce">
-          <HoverTypingAnimationContainer text={"Future"} hoveredText={"Scroll down to the Future"}/>
-        </div>
-      </div>
 
-      <div className="min-h-screen snap-center flex flex-col justify-around items-center">
-          <NavigationScrollTopOrBottom targetRef={timelineRef} href="/future">
-            <PinkTypingAnimationText
-              text="Trip to the Future"
-              delay={0}
-              duration={16}
-            />
-          </NavigationScrollTopOrBottom>
+        {/*bottom section*/}
+        <div className="min-h-screen snap-center flex flex-col justify-around items-center">
+        </div>
+      </Container>
+      <div className="flex items-center justify-center grow">
+        <LinkWithTypingAnimation text={"Future →"} delay={0} duration={10} link={"/future"}/>
       </div>
     </div>
   );
