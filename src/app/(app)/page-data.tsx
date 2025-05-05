@@ -8,7 +8,6 @@ import {
   UniversityIcon,
   WorkflowIcon,
 } from "lucide-react";
-import {BellIcon} from "@radix-ui/react-icons";
 import {IconCloud} from "@/components/ui/icon-cloud";
 
 const slugs = [
@@ -77,17 +76,6 @@ export const features = [
     background: <></>,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
     hasCta: true,
-  },
-  {
-    Icon: BellIcon,
-    name: "Notifications",
-    description:
-      "Get notified when someone shares a file or mentions you in a comment.",
-    href: "/",
-    cta: "Learn more",
-    background: <></>,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-3 lg:row-end-4",
-    hasCta: false,
   },
   {
     Icon: BookUserIcon,
