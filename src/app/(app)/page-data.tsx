@@ -79,17 +79,6 @@ export const features = [
     hasCta: true,
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
-    description:
-      "Get notified when someone shares a file or mentions you in a comment.",
-    href: "/",
-    cta: "Learn more",
-    background: <></>,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-3 lg:row-end-4",
-    hasCta: false,
-  },
-  {
     Icon: BookUserIcon,
     name: "Open-minded, Flexible, and Proactive",
     description:
