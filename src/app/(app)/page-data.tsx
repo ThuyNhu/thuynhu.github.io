@@ -8,7 +8,6 @@ import {
   UniversityIcon,
   WorkflowIcon,
 } from "lucide-react";
-import {BellIcon} from "@radix-ui/react-icons";
 import {IconCloud} from "@/components/ui/icon-cloud";
 
 const slugs = [
