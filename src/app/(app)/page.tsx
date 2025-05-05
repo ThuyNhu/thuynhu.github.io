@@ -1,5 +1,5 @@
 import {BentoCard, BentoGrid} from "@/components/ui/bento-grid";
-import {features} from "@/app/(app)/features";
+import {features} from "@/app/(app)/page-data";
 
 
 export default function HomePage() {
