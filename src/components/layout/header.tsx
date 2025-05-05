@@ -26,7 +26,7 @@ export function SiteHeader() {
           <Logo className="size-5"/>
         </Link>
 
-        <div className="flex flex-1 items-center justify-between gap-4 md:justify-end">
+        <div className="flex flex-1 items-center gap-4 justify-end">
           <div className="w-full flex-1 flex flex-row gap-4 md:w-auto md:flex-none">
             {/*<CommandMenu />*/}
             {menuItems.map((item, index) =>
