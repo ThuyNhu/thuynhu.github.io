@@ -1,6 +1,7 @@
-import {Sixtyfour} from "next/font/google";
+import {JetBrains_Mono} from "next/font/google";
 
-export const fontSixtyfour = Sixtyfour({
-  variable: "--font-sixtyfour",
-  subsets: ["latin-ext", "math", "symbols"],
+export const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  // subsets: ["cyrillic-ext", "greek", "latin-ext", "vietnamese"],
 });
