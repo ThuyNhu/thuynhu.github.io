@@ -60,7 +60,7 @@ const BentoCard = ({
         ? <img src={background} alt={name}/>
         : background
     }</div>
-    <div className="absolute z-5 size-full bg-gradient-to-t from-background via-background/75 to-transparent"/>
+    <div className="absolute z-5 size-full bg-gradient-to-t from-background via-background/50 to-transparent"/>
     <div className="z-10 flex transform-gpu flex-col gap-2 p-6 transition-all duration-300 group-hover:-translate-y-12">
       {Icon && <Icon
         className="size-10 origin-left transform-gpu text-muted-foreground transition-all duration-300 ease-in-out group-hover:scale-75"/>
