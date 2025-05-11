@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {useEffect} from "react";
-import {isDay} from "@/components/ui/date-time-text";
+import {isDark} from "@/components/ui/date-time-text";
 
 export function ThemeToggle() {
   const {setTheme} = useTheme();
@@ -21,7 +21,7 @@ export function ThemeToggle() {
   useEffect(() => {
     if (currentTheme === "auto") {
       setInterval(() => {
-        if (isDay())
+        if (isDark())
           setTheme("light");
         else
           setTheme("dark");
