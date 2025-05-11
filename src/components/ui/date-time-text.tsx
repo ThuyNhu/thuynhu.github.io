@@ -18,10 +18,10 @@ export default function DateTimeText() {
   }, []);
 
   return (<>
-      <div className="flex flex-row gap-4 items-center group/datetime">
+      <div className="flex flex-row gap-2 items-center group/datetime">
         {!isDay()
-          ? <SunIcon className="size-5 group-hover/datetime:text-yellow-500 animate-[spin_10s_linear_infinite]"/>
-          : <MoonIcon className="size-5 group-hover/datetime:text-blue-500"/>
+          ? <SunIcon className="size-4 group-hover/datetime:text-yellow-500 animate-[spin_10s_linear_infinite]"/>
+          : <MoonIcon className="size-4 group-hover/datetime:text-blue-500"/>
         }
         <p>{timeNow}</p>
       </div>

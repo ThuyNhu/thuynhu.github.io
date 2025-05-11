@@ -9,9 +9,19 @@
 */
 @custom-variant dark (&:is(.dark *));
 
+/*noinspection CssUnresolvedCustomProperty*/
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --font-sans-default: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--font-playwrite-usa-modern, var(--font-sans-default));
+
+  --font-serif-default: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: var(--font-playwrite-usa-trad, var(--font-serif-default));
+
+  --font-mono-default: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: var(--font-jetbrains-mono, var(--font-mono-default));
 }
 
 /*
@@ -172,5 +182,31 @@
 
   .container {
     @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+  }
+}
+
+@layer typography {
+  h1 {
+    @apply scroll-m-20 font-serif text-4xl font-bold lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 font-serif border-b pb-2 text-3xl font-bold first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 font-serif text-2xl font-bold;
+  }
+
+  h4 {
+    @apply scroll-m-20 font-serif text-xl font-bold;
+  }
+
+  h5 {
+    @apply scroll-m-20 font-serif text-lg font-bold;
+  }
+
+  h6 {
+    @apply scroll-m-20 font-serif font-bold;
   }
 }

@@ -1,12 +1,14 @@
 import {
-  BookUserIcon,
-  BuildingIcon,
+  ChefHatIcon,
+  DraftingCompassIcon,
   GlobeIcon,
-  LucideLaugh,
-  SendIcon,
-  TextQuoteIcon,
-  UniversityIcon,
-  WorkflowIcon,
+  GraduationCapIcon,
+  HandshakeIcon,
+  LaughIcon,
+  LayersIcon,
+  QuoteIcon,
+  ShapesIcon,
+  SparklesIcon,
 } from "lucide-react";
 import {IconCloud} from "@/components/ui/icon-cloud";
 
@@ -35,7 +37,7 @@ const slugs = [
 
 export const features = [
   {
-    Icon: LucideLaugh,
+    Icon: LaughIcon,
     name: "Hi, I'm Thuy",
     description: "Welcome to my corner of the internet. Thanks for stopping by!",
     background: <img alt="My image" className="absolute -right-20 -top-20 opacity-60"/>,
@@ -45,12 +47,12 @@ export const features = [
     cta: "",
   },
   {
-    Icon: UniversityIcon,
+    Icon: GraduationCapIcon,
     name: "MSc in Computer Science",
     description: "I obtained my Master's degree in Computer Science from the University of Twente, following my Bachelor's degree in Computer Science from Ho Chi Minh City University of Technology (HCMUT).",
     href: "https://www.utwente.nl/en/education/master/programmes/computer-science/",
     cta: "Learn more",
-    // background: <img alt="My image" className="absolute -right-20 -top-20 opacity-60"/>,
+    // background: <img alt="My image" className="absolute -right-20 -top-20 opacity-60",
     background: <img
       src="https://1348661504.rsc.cdn77.org/.wh/ea/uc/f921ce86f01024b315d00e6d03304d2bd9837a8cf2bb300/cubicus.jpg"
       alt="My image" className="absolute opacity-20 w-full h-full object-cover"/>,
@@ -58,7 +60,7 @@ export const features = [
     hasCta: true,
   },
   {
-    Icon: BuildingIcon,
+    Icon: DraftingCompassIcon,
     name: "Software Engineer",
     description: "For the past 2.5 years, I've been a backend-focused software engineer in the banking world, where I also enjoy pitching in with frontend work and actively exploring DevOps. My goal is to help deliver reliable applications and keep growing my skills along the way!",
     href: "/",
@@ -68,8 +70,8 @@ export const features = [
     hasCta: false,
   },
   {
-    Icon: SendIcon,
-    name: "Reach me",
+    Icon: HandshakeIcon,
+    name: "Get in touch",
     description: "You can find me on LinkedIn. Feel free to reach out!",
     href: "https://www.linkedin.com/in/thuyngnhu/",
     cta: "My LinkedIn",
@@ -78,8 +80,8 @@ export const features = [
     hasCta: true,
   },
   {
-    Icon: BookUserIcon,
-    name: "Open-minded, Flexible, and Proactive",
+    Icon: SparklesIcon,
+    name: "The real me",
     description:
       "My open-mindedness and flexibility in adopting new technologies and tasks, combined with a proactive problem-solving approach, fuels my continuous learning and growth.\n" +
       "\n",
@@ -90,8 +92,8 @@ export const features = [
     hasCta: false,
   },
   {
-    Icon: WorkflowIcon,
-    name: "Tech Stack",
+    Icon: LayersIcon,
+    name: "Tech stack",
     description:
       "For the backend, I often reach for Python and FastAPI for its speed and flexibility or dive into the power of Java with Spring Boot. On the front end, TypeScript, Next.js and Tailwind CSS are my go-to. And when it comes to getting everything live, I use Azure DevOps, OpenShift, and Kubernetes to deploy my applications.",
     href: "/",
@@ -116,7 +118,7 @@ export const features = [
     hasCta: false,
   },
   {
-    Icon: TextQuoteIcon,
+    Icon: QuoteIcon,
     name: "My favorite quote",
     description:
       "To the world, you may be one person, but to one person, you may be the world.",
@@ -127,10 +129,10 @@ export const features = [
     hasCta: false,
   },
   {
-    Icon: TextQuoteIcon,
-    name: "If I weren't a software engineer ...",
+    Icon: ChefHatIcon,
+    name: "Still cooking...",
     description:
-      "I'd be a cook. I love everything about food – cooking it, eating it. And there's something really great about knowing my food makes people happy.",
+      "If I weren't a software engineer, I'd be a cook. I love everything about food – cooking it, eating it. And there's something really great about knowing my food makes people happy.",
     href: "/",
     cta: "Learn more",
     background: <></>,
@@ -138,7 +140,7 @@ export const features = [
     hasCta: false,
   },
   {
-    Icon: TextQuoteIcon,
+    Icon: ShapesIcon,
     name: "Hobbies",
     description:
       "Outside of the kitchen, I also enjoy exploring new places through travel and diving into the world of video games and board games.",

@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import "../styles/globals.css";
 import React from "react";
 import {cn} from "@/lib/utils";
-import {jetbrainsMono} from "@/lib/fonts";
+import {jetbrainsMono, playwriteUsModern, playwriteUsTrad} from "@/lib/fonts";
 import {ThemeProvider} from "@/components/themes/theme-provider";
 
 export const metadata: Metadata = {
@@ -29,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(
       jetbrainsMono.variable,
-      "font-mono"
+      playwriteUsTrad.variable,
+      playwriteUsModern.variable,
+      "font-sans"
     )}>
     <head>
     </head>

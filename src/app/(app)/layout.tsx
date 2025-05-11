@@ -12,7 +12,7 @@ export default function RootClientLayout({
 }>) {
 
   return (
-    <div className="relative flex min-h-svh flex-col bg-background font-mono">
+    <div className="relative flex min-h-svh flex-col bg-background">
       <div data-wrapper="" className="flex flex-1 flex-col">
         <SiteHeader/>
         <main className="flex flex-1 flex-col">{children}</main>
