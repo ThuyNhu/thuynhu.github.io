@@ -22,7 +22,7 @@ const techNames = [
   "typescript",
   "javascript",
   "tailwindcss",
-  "nextdotjs",
+  "nextdotjs/gray",
   "vitest",
   "k6",
   "npm",
@@ -30,9 +30,9 @@ const techNames = [
   "openshift",
   "kubernetes",
   "git",
-  "github",
+  "github/gray",
   "gitlab",
-  "jetbrains",
+  "jetbrains/gray",
   "figma",
 ];
 
@@ -82,7 +82,8 @@ export const features: BentoCardProps[] = [
       "For the backend, I often reach for Python and FastAPI for its speed and flexibility or dive into the power of Java with Spring Boot. On the front end, TypeScript, Next.js and Tailwind CSS are my go-to. And when it comes to getting everything live, I use Azure DevOps, OpenShift, and Kubernetes to deploy my applications.",
     href: "/",
     background: <div className="flex items-center justify-center">
-      <IconCloud images={techNames.map((techName) => `https://cdn.simpleicons.org/${techName}`,
+      <IconCloud images={techNames.map(
+        (techName) => `https://cdn.simpleicons.org/${techName}`,
       )}/>
     </div>,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-5",
