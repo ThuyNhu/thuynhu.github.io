@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Thuy Nguyen",
   description: "Thuy Nguyen's website",
   icons: {
-    icon: "/logo.ico",
+    icon: "/favicon.ico",
   },
   creator: "Thuy Nguyen",
   authors: [

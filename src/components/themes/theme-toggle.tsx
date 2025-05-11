@@ -1,18 +1,19 @@
 "use client";
 
 import * as React from "react";
+import {useEffect} from "react";
 import {Moon, Sun} from "lucide-react";
 import {useTheme} from "next-themes";
 
 import {Button} from "@/components/ui/button";
 import {
   DropdownMenu,
-  DropdownMenuContent, DropdownMenuRadioGroup,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {useEffect} from "react";
-import {isDark} from "@/components/ui/date-time-text";
+import {isDarkTime} from "@/components/ui/date-time-text";
 
 export function ThemeToggle() {
   const {setTheme} = useTheme();
@@ -21,7 +22,7 @@ export function ThemeToggle() {
   useEffect(() => {
     if (currentTheme === "auto") {
       setInterval(() => {
-        if (isDark())
+        if (isDarkTime())
           setTheme("light");
         else
           setTheme("dark");

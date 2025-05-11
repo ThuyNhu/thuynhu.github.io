@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {MoonIcon, SunIcon} from "lucide-react";
 import {DateTime} from "luxon";
 
-export function isDark(datetime: DateTime) {
+export function isDarkTime(datetime: DateTime = DateTime.now()) {
   return datetime.hour < 6 && datetime.hour >= 18;
 }
 
@@ -20,7 +20,7 @@ export default function DateTimeText() {
   return (<>
       <div className="flex flex-row gap-2 items-center group/datetime">
         <p>{timeNow.toFormat("HH:mm:ss")}</p>
-        {isDark(timeNow)
+        {isDarkTime(timeNow)
           ? <SunIcon className="size-4 group-hover/datetime:text-yellow-500 animate-[spin_10s_linear_infinite]"/>
           : <MoonIcon className="size-4 group-hover/datetime:text-blue-500"/>
         }
