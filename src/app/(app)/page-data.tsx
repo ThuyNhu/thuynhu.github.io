@@ -50,9 +50,9 @@ export const features: BentoCardProps[] = [
   {
     Icon: GraduationCapIcon,
     name: "MSc in Computer Science",
-    description: "I obtained my Master's degree in Computer Science from the University of Twente, following my Bachelor's degree in Computer Science from Ho Chi Minh City University of Technology (HCMUT).",
+    description: "I obtained my Master's degree in Computer Science from the University of Twente (UT), following my Bachelor's degree in Computer Science from Ho Chi Minh City University of Technology (HCMUT). [Photo from the UT Student Union.]",
     href: "https://www.utwente.nl/en/education/master/programmes/computer-science/",
-    background: "https://1348661504.rsc.cdn77.org/.wh/ea/uc/f921ce86f01024b315d00e6d03304d2bd9837a8cf2bb300/cubicus.jpg",
+    background: "https://su.utwente.nl/.wh/ea/uc/i027872690102d4223203cfb114036c02f4212003cdfd0701c1ac03a50180/img-5109.jpg",
     className: "md:col-start-2 md:col-end-3 md:row-start-3 md:row-end-5",
   },
   {
@@ -87,7 +87,7 @@ export const features: BentoCardProps[] = [
     Icon: LayersIcon,
     name: "Tech stack",
     description:
-      "For the backend, I often reach for Python and FastAPI for its speed and flexibility or dive into the power of Java with Spring Boot. On the front end, TypeScript, Next.js and Tailwind CSS are my go-to. And when it comes to getting everything live, I use Azure DevOps, OpenShift, and Kubernetes to deploy my applications.",
+      "For the backend, I often reach for Python and FastAPI for its speed and flexibility, or tap into the power of Java with Spring Boot. On the frontend, TypeScript, Next.js, and Tailwind CSS are my go-to. And when it comes to getting everything live, I use Azure DevOps, OpenShift, and Kubernetes to deploy my applications. But I'm always open for new challenges.",
     href: "/",
     background: <div className="flex items-center justify-center">
       <IconCloud images={techNames.map(
