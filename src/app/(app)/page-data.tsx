@@ -93,7 +93,7 @@ export const features: BentoCardProps[] = [
     background: <div className="flex items-center justify-center">
       <IconCloud images={techNames.map(
         (techName) => `https://cdn.simpleicons.org/${techName}`,
-      )}/>
+      )} className="w-full"/>
     </div>,
     className: "md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4",
   },

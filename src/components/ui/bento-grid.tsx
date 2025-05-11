@@ -45,7 +45,7 @@ const BentoCard = ({
   <div
     key={name}
     className={cn(
-      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl ",
+      "group/bento-card relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl min-h-80",
       // light styles
       "bg-background shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
@@ -54,16 +54,17 @@ const BentoCard = ({
     )}
     {...props}
   >
-    <div className="[&>img]:absolute [&>img]:w-full [&>img]:h-full [&>img]:object-cover">{
+    <div className="[&>img]:absolute [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:group-hover/bento-card:scale-125 [&>img]:transition-[scale] duration-500">{
       typeof background === "string"
         // eslint-disable-next-line @next/next/no-img-element
         ? <img src={background} alt={name}/>
         : background
     }</div>
-    <div className="absolute z-5 size-full bg-gradient-to-t from-background via-background/50 to-transparent"/>
-    <div className="z-10 flex transform-gpu flex-col gap-2 p-6 transition-all duration-300 group-hover:-translate-y-12">
+    <div
+      className="absolute z-5 size-full bg-gradient-to-t from-background via-background/25 dark:via-background/50 to-transparent"/>
+    <div className="z-10 flex transform-gpu flex-col gap-2 p-6 transition-all duration-300 group-hover/bento-card:-translate-y-12">
       {Icon && <Icon
-        className="size-10 origin-left transform-gpu text-muted-foreground transition-all duration-300 ease-in-out group-hover:scale-75"/>
+        className="size-10 origin-left transform-gpu text-pink-600 dark:text-pink-300 transition-all duration-300 ease-in-out group-hover/bento-card:scale-75"/>
       }
       <h4 className="text-xl font-semibold text-muted-foreground dark:text-neutral-300">
         {name}
@@ -73,7 +74,7 @@ const BentoCard = ({
 
     <div
       className={cn(
-        "absolute z-10 bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+        "absolute z-10 bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-6 opacity-0 transition-all duration-300 group-hover/bento-card:translate-y-0 group-hover/bento-card:opacity-100",
       )}
     >
       {showCta && (
@@ -86,7 +87,7 @@ const BentoCard = ({
       )}
     </div>
     <div
-      className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10"/>
+      className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover/bento-card:bg-black/[.03] group-hover/bento-card:dark:bg-neutral-800/10"/>
   </div>
 );
 

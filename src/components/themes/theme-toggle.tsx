@@ -23,9 +23,9 @@ export function ThemeToggle() {
     if (currentTheme === "auto") {
       setInterval(() => {
         if (isDarkTime())
-          setTheme("light");
-        else
           setTheme("dark");
+        else
+          setTheme("light");
       }, 3600000);
     }
     setTheme(currentTheme);

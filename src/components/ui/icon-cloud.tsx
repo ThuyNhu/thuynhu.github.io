@@ -1,7 +1,8 @@
 "use client";
 
-import React, {useEffect, useRef, useState} from "react";
+import React, {HTMLProps, useEffect, useRef, useState} from "react";
 import {renderToString} from "react-dom/server";
+import {cn} from "@/lib/utils";
 
 interface Icon {
   x: number;
@@ -12,7 +13,7 @@ interface Icon {
   id: number;
 }
 
-interface IconCloudProps {
+interface IconCloudProps extends HTMLProps<HTMLCanvasElement>{
   icons?: React.ReactNode[];
   images?: string[];
 }
@@ -21,7 +22,12 @@ function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export function IconCloud({ icons, images }: IconCloudProps) {
+export function IconCloud({
+  icons,
+  images,
+  className,
+  ...props
+}: IconCloudProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [iconPositions, setIconPositions] = useState<Icon[]>([]);
   const [rotation] = useState({ x: 0, y: 0 });
@@ -314,9 +320,13 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="rounded-lg"
+      className={cn(
+        "rounded-lg",
+        className,
+      )}
       aria-label="Interactive 3D Icon Cloud"
       role="img"
+      {...props}
     />
   );
 }
